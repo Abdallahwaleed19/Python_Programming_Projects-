@@ -85,6 +85,7 @@
 // }
 
 // Overriding
+
 // class Car {
 //   String? brand;
 //   int? speed;
@@ -114,4 +115,116 @@
 //   tesla.power();
 // }
 
+// Abstract
 
+// abstract class Shape {
+//   int dim1;
+//   int dim2;
+//   Shape(this.dim1, this.dim2);
+//   void area(); // Abstract method
+// }
+
+// class Rectangle extends Shape {
+//   Rectangle(int dim1, int dim2) : super(dim1, dim2);
+//   @override
+//   void area() {
+//     print("The Rectangle area is: ${dim1 * dim2}");
+//   }
+// }
+
+// class Triangle extends Shape {
+//   Triangle(int dim1, int dim2) : super(dim1, dim2);
+//   @override
+//   void area() {
+//     print("The Triangle area is: ${0.5 * dim1 * dim2}");
+//   }
+// }
+
+// void main() {
+//   Rectangle rectangle = Rectangle(10, 20);
+//   rectangle.area();
+
+//   Triangle triangle = Triangle(10, 20);
+//   triangle.area();
+// }
+
+// interface
+
+// abstract class Area {
+//   void area(); // Abstract method
+// }
+
+// abstract class Perimeter {
+//   void perimeter(); // Abstract method
+// }
+
+// class Rectangle implements Area, Perimeter {
+//   int length;
+//   int width;
+
+//   Rectangle(this.length, this.width);
+
+//   @override
+//   void area() {
+//     print("The area of the Rectangle is: ${length * width}");
+//   }
+
+//   @override
+//   void perimeter() {
+//     print("The perimeter of the Rectangle is: ${2 * (length + width)}");
+//   }
+// }
+
+// void main() {
+//   Rectangle rectangle = Rectangle(10, 20);
+//   rectangle.area();
+//   rectangle.perimeter();
+// }
+
+// Mixin
+
+// mixin canFly {
+//   void fly() {
+//     print(" I can fly ");
+//   }
+// }
+// mixin canWalk {
+//   void walk() {
+//     print("I can walk");
+//   }
+// }
+
+// class Bird with canFly, canWalk {}
+
+// class Human with canWalk {}
+
+// void main() {
+//   Bird bird = Bird();
+//   bird.fly();
+//   bird.walk();
+//   Human human = Human();
+//   human.walk();
+// }
+
+// abstract class Animal {
+//   String? name;
+//   double? speed;
+//   Animal(this.name, this.speed);
+//   void run();
+// }
+
+// mixin canRun on Animal {
+//   @override
+//   void run() {
+//     print("${this.name} is running at ${this.speed} km/h");
+//   }
+// }
+
+// class Dog extends Animal with canRun {
+//   Dog(String name, double speed) : super(name, speed);
+// }
+
+// void main() {
+//   Dog dog = Dog("Buddy", 30);
+//   dog.run();
+// }
